@@ -1,0 +1,10 @@
+<section>
+  <h1>Post a tweet</h1>
+
+  <%= form_with model: @tweet do |form| %>
+    <%= form.rich_text_area :content %>
+    <div align="right" style="margin-top: 1em;">
+      <%= form.submit "Post" %>
+    </div>
+  <% end %>
+</section>

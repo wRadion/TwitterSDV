@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  background-color: #224;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:visited {
+  font: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #335;
+  margin-bottom: 1em;
+}
+
+nav .right {
+  display: flex;
+  gap: 1em;
+}
+
+button, a.button, input[type=submit] {
+  padding: 0.3em;
+  background-color: #66C;
+  border-radius: 4px;
+  text-align: center;
+}
+
+button:hover:not(:disabled),
+a.button:hover:not(:disabled),
+input[type=submit]:hover:not(:disabled) {
+  cursor: pointer;
+  background-color: #88D;
+}
+
+.content {
+  width: 800px;
+  margin: auto;
+}
+
+section {
+  width: 100%;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+section + section {
+  margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  /* width: 400px; */
+}
+
+.field {
+  padding: 0.5em 0;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+
+input {
+  font-family: 'Manrope', sans-serif;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  color: red;
+  background-color: rgba(255, 0, 0, 0.2);
+}
